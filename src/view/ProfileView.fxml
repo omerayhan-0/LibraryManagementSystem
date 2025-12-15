@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" alignment="CENTER"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.ProfileController">
+
+    <Label text="Profil Bilgilerim" style="-fx-font-size: 18px;"/>
+
+    <TextField fx:id="txtName" promptText="Ad Soyad"/>
+    <TextField fx:id="txtEmail" promptText="E-posta"/>
+    <TextField fx:id="txtPhone" promptText="Telefon"/>
+    <TextField fx:id="txtTc" promptText="TC"/>
+    <PasswordField fx:id="txtPassword" promptText="Şifre"/>
+
+    <Button text="Bilgileri Güncelle" onAction="#handleUpdate"/>
+    <Label fx:id="labelStatus"/>
+
+</VBox>
+

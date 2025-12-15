@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="10" alignment="CENTER" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.LoginController"
+      prefWidth="800"
+      prefHeight="600"
+      stylesheets="@../styless.css">
+
+    <Label text="Kütüphane Giriş Sistemi" style="-fx-font-size: 20px;"/>
+
+    <TextField fx:id="usernameField" promptText="Kullanıcı adı / TC / E-posta" />
+    <PasswordField fx:id="passwordField" promptText="Şifre" />
+
+    <Button text="Giriş Yap" fx:id="loginButton" onAction="#handleLogin"/>
+
+    <Label fx:id="statusLabel" textFill="red"/>
+
+</VBox>
+

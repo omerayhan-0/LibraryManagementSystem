@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.DashboardController"
+            prefWidth="1100" prefHeight="700">
+
+    <!-- ▓▓▓ SOL MENÜ ▓▓▓ -->
+    <left>
+        <VBox spacing="15" style="-fx-background-color: #F4F4F4;" prefWidth="220">
+            <padding>
+                <Insets top="25" left="20" right="20" bottom="20"/>
+            </padding>
+
+            <Label text="ÜYE PANELİ"
+                   style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+            <Separator/>
+
+            <Button text="Profil"
+                    prefWidth="180"
+                    style="-fx-font-size: 14px;"
+                    onAction="#openProfileView"/>
+
+            <Button text="Kitap Ara"
+                    prefWidth="180"
+                    style="-fx-font-size: 14px;"
+                    onAction="#openBookSearch"/>
+
+            <Button text="Kitap Ödünç Al"
+                    prefWidth="180"
+                    style="-fx-font-size: 14px;"
+                    onAction="#openBorrowScreen"/>
+
+            <Button text="Ödünç İşlemlerim"
+                    prefWidth="180"
+                    style="-fx-font-size: 14px;"
+                    onAction="#openMemberBorrowList"/>
+
+            <Button text="Çıkış Yap"
+                    prefWidth="180"
+                    style="-fx-font-size: 14px;"
+                    onAction="#logout"/>
+
+            <VBox VBox.vgrow="ALWAYS"/>
+
+        </VBox>
+    </left>
+
+    <!-- ▓▓▓ ÜST BAR ▓▓▓ -->
+    <top>
+        <HBox style="-fx-background-color: #ECECEC;"
+              spacing="10"
+              prefHeight="60"
+              alignment="CENTER_LEFT">
+            <padding>
+                <Insets left="20"/>
+            </padding>
+
+            <Label fx:id="labelWelcome"
+                   text="Hoş geldiniz"
+                   style="-fx-font-size: 22px; -fx-font-weight: bold;"/>
+        </HBox>
+    </top>
+
+    <!-- ▓▓▓ ANA İÇERİK ALANI ▓▓▓ -->
+    <center>
+        <AnchorPane fx:id="contentArea"
+                    style="-fx-background-color: white;"
+                    prefWidth="800" prefHeight="600">
+        </AnchorPane>
+    </center>
+
+</BorderPane>
+
+
+

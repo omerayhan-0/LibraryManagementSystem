@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" alignment="CENTER"
+      xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.UserEditController"
+      style="-fx-padding: 20;">
+
+    <Label text="Kullanıcı Bilgilerini Düzenle" style="-fx-font-size: 16px;"/>
+
+    <TextField fx:id="usernameField" promptText="İsim"/>
+    <TextField fx:id="emailField" promptText="Email"/>
+    <TextField fx:id="tcField" promptText="TC"/>
+
+    <Button text="Kaydet" onAction="#handleSave"/>
+
+    <Label fx:id="statusLabel" textFill="red"/>
+
+</VBox>

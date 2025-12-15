@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="15" alignment="CENTER" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.AddStaffController"
+      style="-fx-padding: 20; -fx-background-color: #f4f4f4;">
+
+    <Label text="Yeni Personel Ekle" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+
+    <TextField fx:id="txtFullName" promptText="Ad Soyad (Örn: Ahmet Yılmaz)" prefWidth="250"/>
+
+    <TextField fx:id="txtUsername" promptText="Kullanıcı Adı" prefWidth="250"/>
+    <TextField fx:id="txtEmail" promptText="Email (örn: ali@kutuphane.com)" prefWidth="250"/>
+    <PasswordField fx:id="txtPassword" promptText="Şifre" prefWidth="250"/>
+
+    <Button text="Personeli Kaydet" onAction="#handleSave"
+            prefWidth="200" style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-weight: bold;"/>
+
+</VBox>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.MemberDetailController">
+
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+
+    <!-- ÜYE BİLGİLERİ -->
+    <top>
+        <VBox spacing="5">
+            <Label fx:id="lblName"
+                   style="-fx-font-size:16px; -fx-font-weight:bold;"/>
+            <Label fx:id="lblEmail"/>
+            <Label fx:id="lblTc"/>
+        </VBox>
+    </top>
+
+    <!-- ORTA -->
+    <center>
+        <TabPane>
+
+            <Tab text="Ödünçler">
+                <VBox spacing="10">
+                    <padding>
+                        <Insets top="10" right="10" bottom="10" left="10"/>
+                    </padding>
+
+                    <TableView fx:id="tableActiveBorrow">
+                        <columns>
+                            <TableColumn fx:id="colBorrowId" text="ID" prefWidth="60"/>
+                            <TableColumn fx:id="colTitle" text="Kitap" prefWidth="200"/>
+                            <TableColumn fx:id="colBorrowDate" text="Alış Tarihi" prefWidth="120"/>
+                            <TableColumn fx:id="colDueDate" text="Son Teslim" prefWidth="120"/>
+                            <TableColumn fx:id="colLateDays" text="Gecikme (Gün)" prefWidth="110"/>
+                            <TableColumn fx:id="colLateFee" text="Ceza (₺)" prefWidth="90"/>
+                        </columns>
+                    </TableView>
+
+
+                    <Button text="İade Et"
+                            onAction="#handleReturn"
+                            style="-fx-font-size:14px;"/>
+
+                </VBox>
+            </Tab>
+
+        </TabPane>
+    </center>
+
+</BorderPane>

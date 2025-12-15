@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" alignment="CENTER"
+      xmlns="http://javafx.com/javafx"
+      prefWidth="800"
+      prefHeight="600"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.StaffLoginController">
+
+    <Label text="PERSONEL GİRİŞ"/>
+
+    <TextField fx:id="usernameField" promptText="Kullanıcı Adı / E-posta"/>
+    <PasswordField fx:id="passwordField" promptText="Şifre"/>
+
+    <Button text="Giriş Yap" onAction="#handleStaffLogin"/>
+    <Button text="Geri" onAction="#goBack"/>
+
+    <Label fx:id="statusLabel"/>
+
+</VBox>
+

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.MemberBorrowListController"
+      spacing="10"
+      alignment="CENTER"
+      prefWidth="700"
+      prefHeight="500">
+
+    <TableView fx:id="tableBorrowed" prefHeight="400">
+
+        <columns>
+            <TableColumn fx:id="colTitle" text="Kitap" prefWidth="200"/>
+            <TableColumn fx:id="colBorrowDate" text="Alış Tarihi" prefWidth="150"/>
+            <TableColumn fx:id="colReturnDate" text="İade Tarihi" prefWidth="150"/>
+            <TableColumn fx:id="colStatus" text="Durum" prefWidth="120"/>
+        </columns>
+
+    </TableView>
+
+    <Button text="İade Et" onAction="#returnBook"/>
+
+</VBox>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.MemberListController"
+      spacing="10"
+      alignment="CENTER">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <!-- ARAMA -->
+    <HBox spacing="10">
+        <TextField fx:id="txtSearch" promptText="Ad / Email / TC ara..." />
+        <Button text="Ara" onAction="#handleSearch"/>
+    </HBox>
+
+    <!-- TABLO -->
+    <TableView fx:id="tableMembers"
+               prefWidth="650"
+               prefHeight="400"
+               onMouseClicked="#handleTableClick">
+
+        <columns>
+            <TableColumn fx:id="colId" text="ID" prefWidth="50"/>
+            <TableColumn fx:id="colUsername" text="Kullanıcı Adı" prefWidth="150"/>
+            <TableColumn fx:id="colEmail" text="Email" prefWidth="200"/>
+            <TableColumn fx:id="colTc" text="TC" prefWidth="150"/>
+        </columns>
+    </TableView>
+
+    <!-- BUTON -->
+    <Button text="Ödünç Ver" onAction="#handleBorrow"/>
+
+</VBox>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.BookManageController"
+            prefWidth="800" prefHeight="500">
+
+    <center>
+        <TableView fx:id="bookTable">
+            <columns>
+                <TableColumn fx:id="idCol" text="ID"/>
+                <TableColumn fx:id="titleCol" text="Başlık"/>
+                <TableColumn fx:id="authorCol" text="Yazar"/>
+                <TableColumn fx:id="categoryCol" text="Kategori"/>
+                <TableColumn fx:id="statusCol" text="Durum"/>
+                <TableColumn fx:id="quantityCol" text="Adet"/>
+            </columns>
+        </TableView>
+    </center>
+
+    <bottom>
+        <HBox spacing="10" alignment="CENTER">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+
+            <Button text="Yenile" onAction="#loadBooks"/>
+            <Button text="Güncelle" onAction="#updateBook"/>
+            <Button text="Sil" onAction="#deleteBook"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>
